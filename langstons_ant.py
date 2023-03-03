@@ -85,15 +85,15 @@ def set_dir(current_direction,tile_value): #we use modulus 4 to change rotation 
     else:
         return (current_direction + 1) % 4
 
-def move(x,y,current_direction):
+def move(y,x,current_direction):
     if(current_direction == 0): #moving up
-        return (x,y-1)
+        return (y-1,x)
     if(current_direction == 1): #moving right
-        return (x+1,y)
+        return (y,x+1)
     if(current_direction == 2): #moving down
-        return (x+1,y+1)
+        return (y+1,x)
     if(current_direction == 3): #moving left
-        return(x-1,y)
+        return(y,x-1)
     #moving on
         
 def update_state():
