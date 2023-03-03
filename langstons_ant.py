@@ -2,15 +2,15 @@ import arcade
 import random
 import numpy as np
 
-ROW_COUNT = 50
-COLUMN_COUNT = 50
+ROW_COUNT = 100
+COLUMN_COUNT = 100
 
 SCREEN_TITLE = "Ant"
 
-WIDTH = 20
-HEIGHT = 20
+WIDTH = 10
+HEIGHT = 10
 
-MARGIN = 5
+MARGIN = 1
 
 SCREEN_WIDTH = (WIDTH + MARGIN) * COLUMN_COUNT + MARGIN
 SCREEN_HEIGHT = (HEIGHT + MARGIN) * ROW_COUNT + MARGIN
@@ -19,13 +19,15 @@ grid = np.zeros((COLUMN_COUNT,ROW_COUNT))
 grid2 = np.zeros((COLUMN_COUNT,ROW_COUNT))
 sprite_grid = arcade.SpriteList()
 
-FALSE_COL = arcade.color.WHITE #all tiles are white, we change alpha value to darken them when they are True
+FALSE_COL = arcade.color.VIOLET #all tiles are white, we change alpha value to darken them when they are True
 
 direction_list = (0,1,2,3) #0 for UP, 1 FOR RIGHT, 2 FOR DOWN, 3 FOR LEFT, M for monkey
 current_direction = 3 #Starting direction is facing left
 
 current_x = (COLUMN_COUNT/2) #We start off at the center
 current_y = (ROW_COUNT/2)
+
+step = 0 #to keep track of what step we are on
 
 
 
@@ -100,10 +102,14 @@ def update_state():
     global current_x
     global current_y
     global current_direction
+    global step
+
+    print("Step {}".format(step))
+    step +=1
 
     x = int(current_x)
     y = int(current_y)
-    print("Current dir: {} Current x: {} Current y: {}".format(current_direction,current_x,current_y))
+
 
     tile_value = grid[x][y]
     current_direction = set_dir(current_direction,tile_value) #update direction based on tile color
