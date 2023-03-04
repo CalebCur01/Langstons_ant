@@ -2,8 +2,8 @@ import arcade
 import random
 import numpy as np
 
-#This is turmite with rule 181181121010 or {1,8,1} {1,8,1} {1,2,1} {0,1,0}
-#It create a fibonacci spiral
+# {1,8,1} {1,8,1} {1,2,1} {0,1,0}
+
 
 ROW_COUNT = 50
 COLUMN_COUNT = 50
@@ -13,7 +13,7 @@ SCREEN_TITLE = "Turmite"
 WIDTH = 20
 HEIGHT = 20
 
-MARGIN = 5
+MARGIN = 0
 
 SCREEN_WIDTH = (WIDTH + MARGIN) * COLUMN_COUNT + MARGIN
 SCREEN_HEIGHT = (HEIGHT + MARGIN) * ROW_COUNT + MARGIN
@@ -22,7 +22,7 @@ grid = np.zeros((COLUMN_COUNT,ROW_COUNT))
 grid2 = np.zeros((COLUMN_COUNT,ROW_COUNT))
 sprite_grid = arcade.SpriteList()
 
-FALSE_COL = arcade.color.VIOLET #all tiles are white, we change alpha value to darken them when they are True
+FALSE_COL = arcade.color.WHITE #all tiles are white, we change alpha value to darken them when they are True
 
 rules = ((1,8,1),(1,2,1),(1,8,1),(0,1,0))
 
@@ -129,6 +129,8 @@ def update_state():
     global cur_rule
 
     #cont = input("press any key to continue")
+    print("step {}".format(step))
+    step +=1
 
     helper = ""
     if(cur_dir == 0):
