@@ -86,7 +86,7 @@ def within_bounds(x,y): #returns false if an x,y value is outside of our range
         return False
     return True
 
-def set_dir(cur_dir,change_val): # 1 -> no turn, 2 -> right, 3 -> left, 4 -> Uturn but there is no 4
+def set_dir(cur_dir,change_val): # 1 -> no turn, 2 -> right, 3 -> left, 4 -> Uturn
     if(change_val == 1):                 
         return cur_dir
     if(change_val == 2): # 2 -> turn right
