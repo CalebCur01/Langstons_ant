@@ -21,7 +21,7 @@ sprite_grid = arcade.SpriteList()
 
 FALSE_COL = arcade.color.VIOLET #all tiles are white, we change alpha value to darken them when they are True
 
-direction_list = (0,1,2,3) #0 for UP, 1 FOR RIGHT, 2 FOR DOWN, 3 FOR LEFT, M for monkey
+direction_list = (0,1,2,3) #0 for UP, 1 FOR RIGHT, 2 FOR DOWN, 3 FOR LEFT
 current_direction = 3 #Starting direction is facing left
 
 current_x = (COLUMN_COUNT/2) #We start off at the center
