@@ -1,4 +1,4 @@
-Turmites are Turing Machines with a state, orientation, and a "tape" that is made up of a two-dimensional grid. Encoding different rules sometimes results in interesting patterns.
+Turmites are Turing Machines with a state, orientation, and a two-dimensional grid. Encoding different rules sometimes results in interesting patterns.
 # Langston's Ant
 
 Langton's ant has a position and a direction. At white cells, turn 90° clockwise, change color of the cell, then move forward.
@@ -19,11 +19,6 @@ https://github.com/CalebCur01/Langstons_ant/assets/25915691/6431736a-ad4b-4ce9-a
 
 
 https://github.com/CalebCur01/Langstons_ant/assets/25915691/30ad7568-8b2f-4572-8971-be0651c95f8a
-
-![snowflake_15000](https://github.com/CalebCur01/Langstons_ant/assets/25915691/f13c3b0a-cc6a-4214-a09d-5fae11f15349)
-![snowflake_20000](https://github.com/CalebCur01/Langstons_ant/assets/25915691/f945f71e-4110-4733-9833-4f215a96cf18)
-![snowflake_30000](https://github.com/CalebCur01/Langstons_ant/assets/25915691/66d9d1ee-4fb5-403e-b5fe-1c5962477434)
-![snowflake_40000](https://github.com/CalebCur01/Langstons_ant/assets/25915691/a11de8ef-f9c4-447b-a648-1a4d8d4f3719)
 
 
 # Spiral
